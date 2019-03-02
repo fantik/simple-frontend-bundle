@@ -1,7 +1,3 @@
-$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
-
-@import "~bootstrap/scss/bootstrap";
-
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -10,7 +6,6 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica 
 }
 
 body {
-  font-family: $font-stack;
   #logo {
     width: 10rem;
   }
