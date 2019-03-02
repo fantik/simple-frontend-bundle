@@ -1,0 +1,123 @@
+/* stylelint-disable */
+@mixin object-fit($fit: none, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if ($position) {
+    font-family: 'object-fit: ' + $fit +' object-position: ' + $position + '';
+    -o-object-position: $position;
+    object-position: $position;
+  }
+  @else {
+    font-family: 'object-fit: ' + $fit
+  }
+}
+
+@mixin flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin triangle($color, $borders, $height: (($borders * 2) * 0.866%)) {
+  width: 0;
+  height: 0;
+  border-top: $borders solid transparent;
+  border-left: $height solid $color;
+  border-bottom: $borders solid transparent;
+}
+
+@mixin centerAbsolute() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    @content
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    @content
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content
+  }
+}
+
+@mixin tab-l() {
+  @media screen and (max-width: 1279.98px) and (min-width: 768px) and (orientation: landscape) {
+    @content
+  }
+}
+
+@mixin mob-l() {
+  @media screen and (max-width: 767.98px) and (min-width: 320px) and (orientation: landscape) {
+    @content
+  }
+}
+
+@mixin font-face ($font-name, $file-name, $font-weight) {
+  @font-face {
+    font-display: swap;
+    font-family: quote($font-name);
+    src: local(quote($font-name)),
+    url("/fonts/" + $file-name + ".woff2") format("woff2"),
+    url("/fonts/" + $file-name + ".woff") format("woff");
+    font-weight: $font-weight;
+    font-style: normal;
+  }
+}
+
+@mixin fully() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin transition($val) {
+  transition-duration: $val + "s";
+  transition-timing-function: cubic-bezier(0.6, 0, 0.41, 1);
+}
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+  background-image: -ms-linear-gradient($direction, $list);
+}
+
+@mixin orange-circle {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: $orange;
+  z-index: -1;
+  opacity: 0.73;
+}
+
+@mixin image-ie {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  max-width: 3000px;
+  max-height: 3000px;
+  height: auto !important;
+  min-height: 100%;
+  margin: auto;
+}

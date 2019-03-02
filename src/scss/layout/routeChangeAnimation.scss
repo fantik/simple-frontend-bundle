@@ -1,0 +1,48 @@
+//Page animations
+.page-animation-enter-active, .page-animation-leave-active {
+  position: fixed;
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: $black;
+    z-index: 99999;
+  }
+}
+
+.page-animation-enter-active {
+  animation: coming 1s cubic-bezier(0,0,.41,1);
+  &:before {
+    animation: going 1s cubic-bezier(0,0,.41,1);
+    animation-delay: 1.1s;
+  }
+}
+
+.page-animation-leave-active {
+  animation: 1s;
+  &:before {
+    animation: coming 1s cubic-bezier(0,0,.41,1)
+  }
+}
+
+
+@keyframes going {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes coming {
+  from {
+    transform: translate3d(-100%, 0, 0)
+  }
+  to {
+    transform: translate3d(0, 0, 0)
+  }
+}

@@ -1,0 +1,28 @@
+.button {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  &-arrow {
+    padding: 10px;
+    &__icon {
+      width: 8px;
+      height: 15px;
+      path {
+        @include transition(.4);
+        fill: black;
+      }
+    }
+    &:disabled {
+      opacity: 0.1;
+    }
+    .no-touch &:hover {
+      .button-arrow__icon path {
+        fill: $brown-grey;
+      }
+    }
+  }
+  &:focus {
+    outline: none
+  }
+}
