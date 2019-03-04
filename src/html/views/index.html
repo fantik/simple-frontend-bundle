@@ -1,11 +1,22 @@
-<% var data = {
-  title: "Заголовок | Проект",
-  author: "Harrix"
-}; %>
-<%= _.template(require('./../includes/header.html'))(data) %>
+<!--Head-->
+<%= _.template(require('./../includes/head.html'))({}) %>
 
-<main class="home-page">
-  <h1>Yo main</h1>
+<!--Header-->
+<%= _.template(require('./../includes/header.html'))({}) %>
+
+<main class="markup">
+  <div class="container">
+    <h3>Links</h3>
+    <ul>
+      <li>
+        <a href="../home.html">Home page</a>
+      </li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
 </main>
 
-<%= _.template(require('./../includes/footer.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))({}) %>

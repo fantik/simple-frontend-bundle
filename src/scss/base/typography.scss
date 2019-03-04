@@ -1,164 +1,150 @@
-body {
-  font-family: $HelveticaNeue;
-  font-size: 16px;
-  line-height: 1;
-  color: $black;
-  font-weight: 300;
-  font-display: auto;
-}
-
-.h1, h1,
-.h2, h2,
-.h3, h3,
-.h4, h4,
-.h5, h5,
-.h6, h6 {
-  font-family: $AngleciaProDisplay;
-  color: $black;
-  font-weight: 500;
-  margin: 0;
-}
-
-// colors
-.text-dark {
-  color: $black
-}
-
-.text-grey {
-  color: $brown-grey-two;
-}
-
-.text-light {
-  color: $white-secondary
-}
-
-.text-right {
-  text-align: left;
-  @include media-breakpoint-up(md) {
-    text-align: right;
-    margin-left: auto;
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.h1, h1 {
-  font-size: 50px;
-  line-height: 0.96;
-  letter-spacing: 0.5px;
-  @include media-breakpoint-only(md) {
-    font-size: 100px;
-    line-height: 0.9;
-    letter-spacing: 1px;
-  }
-  @include media-breakpoint-only(lg) {
-    font-size: 100px;
-    line-height: 0.9;
-    letter-spacing: 1px;
-  }
-  @include media-breakpoint-only(xl) {
-    font-size: 150px;
-    line-height: 1;
-    letter-spacing: 0;
-  }
-}
-
-.h2, h2 {
-  font-size: 45px;
-  line-height: 1.07;
-  letter-spacing: 2px;
-  @include media-breakpoint-only(xl) {
-    font-size: 120px;
-    line-height: 1.05;
-    letter-spacing: 1.2px;
-  }
-  @include media-breakpoint-only(lg) {
-    font-size: 90px;
-    line-height: 1.02;
-    letter-spacing: 0.9px;
-  }
-  @include media-breakpoint-only(md) {
-    font-size: 80px;
-    letter-spacing: 0.8px;
-    line-height: 86px;
-  }
-}
-
-.h3, h3 {
-  font-size: 30px;
-  line-height: 1.2;
-  letter-spacing: 0.3px;
-  @include media-breakpoint-only(xl) {
-    font-size: 80px;
-    line-height: 1.08;
-    letter-spacing: 0.8px;
-  }
-  @include media-breakpoint-between(md, lg) {
-    font-size: 50px;
-    line-height: 1.04;
-    letter-spacing: 0.5px;
-  }
-}
-
-.h4, h4 {
-  font-size: 26px;
-  line-height: 1.15;
-  letter-spacing: 0.3px;
-  @include media-breakpoint-between(md, xl) {
-    font-size: 30px;
-    line-height: 1.27;
-    letter-spacing: 0.3px;
-  }
-}
-
-.h5, h5 {
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.3px;
-  @include media-breakpoint-between(md, xl) {
-    font-size: 26px;
-    line-height: 1.27;
-    letter-spacing: 0.3px;
-  }
-}
-
-.h6, h6 {
-  font-size: 18px;
-  line-height: 1.15;
-  letter-spacing: 0.3px;
-  @include media-breakpoint-between(md, xl) {
-    font-size: 20px;
-    line-height: 1.27;
-    letter-spacing: 0.3px;
-  }
-}
-
-p, .p, .typo-regular {
-  font-family: $HelveticaNeue;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.75;
-  letter-spacing: 0.4px;
-  color: $black;
-  margin: 0;
-  @include media-breakpoint-only(xl) {
-    font-size: 16px;
-    line-height: 1.88;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//body {
+//  font-family: $HelveticaNeue;
+//  font-size: 16px;
+//  line-height: 1;
+//  color: $black;
+//  font-weight: 300;
+//  font-display: auto;
+//}
+//
+//.h1, h1,
+//.h2, h2,
+//.h3, h3,
+//.h4, h4,
+//.h5, h5,
+//.h6, h6 {
+//  font-family: $AngleciaProDisplay;
+//  color: $black;
+//  font-weight: 500;
+//  margin: 0;
+//}
+//
+//// colors
+//.text-dark {
+//  color: $black
+//}
+//
+//.text-grey {
+//  color: $brown-grey-two;
+//}
+//
+//.text-light {
+//  color: $white-secondary
+//}
+//
+//.text-right {
+//  text-align: left;
+//  @include media-breakpoint-up(md) {
+//    text-align: right;
+//    margin-left: auto;
+//  }
+//}
+//
+//.text-center {
+//  text-align: center;
+//}
+//
+//.h1, h1 {
+//  font-size: 50px;
+//  line-height: 0.96;
+//  letter-spacing: 0.5px;
+//  @include media-breakpoint-only(md) {
+//    font-size: 100px;
+//    line-height: 0.9;
+//    letter-spacing: 1px;
+//  }
+//  @include media-breakpoint-only(lg) {
+//    font-size: 100px;
+//    line-height: 0.9;
+//    letter-spacing: 1px;
+//  }
+//  @include media-breakpoint-only(xl) {
+//    font-size: 150px;
+//    line-height: 1;
+//    letter-spacing: 0;
+//  }
+//}
+//
+//.h2, h2 {
+//  font-size: 45px;
+//  line-height: 1.07;
+//  letter-spacing: 2px;
+//  @include media-breakpoint-only(xl) {
+//    font-size: 120px;
+//    line-height: 1.05;
+//    letter-spacing: 1.2px;
+//  }
+//  @include media-breakpoint-only(lg) {
+//    font-size: 90px;
+//    line-height: 1.02;
+//    letter-spacing: 0.9px;
+//  }
+//  @include media-breakpoint-only(md) {
+//    font-size: 80px;
+//    letter-spacing: 0.8px;
+//    line-height: 86px;
+//  }
+//}
+//
+//.h3, h3 {
+//  font-size: 30px;
+//  line-height: 1.2;
+//  letter-spacing: 0.3px;
+//  @include media-breakpoint-only(xl) {
+//    font-size: 80px;
+//    line-height: 1.08;
+//    letter-spacing: 0.8px;
+//  }
+//  @include media-breakpoint-between(md, lg) {
+//    font-size: 50px;
+//    line-height: 1.04;
+//    letter-spacing: 0.5px;
+//  }
+//}
+//
+//.h4, h4 {
+//  font-size: 26px;
+//  line-height: 1.15;
+//  letter-spacing: 0.3px;
+//  @include media-breakpoint-between(md, xl) {
+//    font-size: 30px;
+//    line-height: 1.27;
+//    letter-spacing: 0.3px;
+//  }
+//}
+//
+//.h5, h5 {
+//  font-size: 20px;
+//  line-height: 1.15;
+//  letter-spacing: 0.3px;
+//  @include media-breakpoint-between(md, xl) {
+//    font-size: 26px;
+//    line-height: 1.27;
+//    letter-spacing: 0.3px;
+//  }
+//}
+//
+//.h6, h6 {
+//  font-size: 18px;
+//  line-height: 1.15;
+//  letter-spacing: 0.3px;
+//  @include media-breakpoint-between(md, xl) {
+//    font-size: 20px;
+//    line-height: 1.27;
+//    letter-spacing: 0.3px;
+//  }
+//}
+//
+//p, .p, .typo-regular {
+//  font-family: $HelveticaNeue;
+//  font-size: 14px;
+//  font-weight: 300;
+//  line-height: 1.75;
+//  letter-spacing: 0.4px;
+//  color: $black;
+//  margin: 0;
+//  @include media-breakpoint-only(xl) {
+//    font-size: 16px;
+//    line-height: 1.88;
+//  }
+//}
